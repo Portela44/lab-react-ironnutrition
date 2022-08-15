@@ -6,6 +6,7 @@ import AddFoodForm from './components/AddFoodForm';
 
 function App() {
   const [foods, setFood] = useState(foodsJson);
+  const [shown, setShown] = useState(true);
 
   const handleNewFood = (food) => {
     const copy = [...foods]; 
@@ -29,10 +30,15 @@ function App() {
     setFood(filtered);
   };
 
+  const handleShown = () => {
+    setShown(prev => !prev);
+  }
+
   return (
     <div className="App">
       <h1>Food List</h1>
-      <AddFoodForm newFood={handleNewFood}/>
+      {shown && <AddFoodForm newFood={handleNewFood}/>}
+      <button className="hideForm" onClick={() => handleShown()}>{shown? "Hide Form":"Add New Food"}</button><br/>
       <input type="text" placeholder="Search" onChange={handleSearch}/>
       <div className="foodList">
         {foods.map(food => {
