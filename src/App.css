@@ -28,6 +28,11 @@
   color: #61dafb;
 }
 
+.foodList {
+  display:flex;
+  flex-wrap: wrap;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
