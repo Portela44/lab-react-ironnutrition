@@ -45,6 +45,7 @@ function App() {
           return <FoodBox key={food.name} food={food} handleDelete={handleDelete}/>
         })}
       </div>
+      {foods.length===0 && <img className="noFood" src="https://media1.giphy.com/media/cIDyoK8vQ4YFMvJk7m/giphy.gif" alt="no food to be shown"/>}
     </div>
   );
 }

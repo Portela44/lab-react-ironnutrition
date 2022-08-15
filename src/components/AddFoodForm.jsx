@@ -7,7 +7,7 @@ export default function AddFoodForm(props) {
     const [calories, setCalories] = useState("");
     const [image, setImage] = useState("");
     const [servings, setServings] = useState("");
-    
+
     const handleForm = (e) => {
         e.preventDefault();
         const food = {
@@ -23,7 +23,7 @@ export default function AddFoodForm(props) {
         setServings("");
     };
     return (
-        <form onSubmit={handleForm} className="FoodForm">
+        <form onSubmit={handleForm} className="foodForm">
             <Divider>Add Food Entry</Divider>
             <label>Name</label>
             <Input value={name} type="text" onChange={(e) => {setName(e.target.value)}} />

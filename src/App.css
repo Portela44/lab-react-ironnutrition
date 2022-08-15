@@ -28,10 +28,36 @@
   color: #61dafb;
 }
 
+.Title {
+  font-size: 3em;
+}
+
 .foodList {
   display:flex;
   flex-wrap: wrap;
 }
+
+.hideForm, .foodForm>button  {
+  text-decoration: none;
+  border-radius: 2px;
+  border-color: #61dafb;
+  color: #61dafb;
+  background-color: transparent;
+  padding: 3px 15px;
+  margin: 15px 0px;
+}
+
+.foodForm {
+  width:25%;
+  margin-left:37.5%;
+
+}
+
+.foodForm > button {
+  width:50%;
+  text-align: center;
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -40,4 +66,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.noFood {
+  width:500px;
+  margin: 20px 0px;
 }
