@@ -22,7 +22,12 @@ function App() {
       );
       setFood(filtered);
     }
-  }
+  };
+
+  const handleDelete = (name) => {
+    const filtered = foods.filter(food => food.name !== name);
+    setFood(filtered);
+  };
 
   return (
     <div className="App">
@@ -31,7 +36,7 @@ function App() {
       <input type="text" placeholder="Search" onChange={handleSearch}/>
       <div className="foodList">
         {foods.map(food => {
-          return <FoodBox key={food.name} food={food}/>
+          return <FoodBox key={food.name} food={food} handleDelete={handleDelete}/>
         })}
       </div>
     </div>
